@@ -20,7 +20,7 @@ function _os_filename() {
 function download_vulkan_installer() {
   local os=$1
   local filename=$(_os_filename $os)
-  local url=https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/$os/$filename?Human=true
+  local url=https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/$os/vulkansdk-$os-x86_64-$VULKAN_SDK_VERSION.tar.gz
   echo "_download_os_installer $os $filename $url" >&2
   if [[ -f $filename ]] ; then
     echo "using cached: $filename"
